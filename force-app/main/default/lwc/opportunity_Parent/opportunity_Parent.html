@@ -1,0 +1,10 @@
+<template>
+    <lightning-card if:true={opportunityCard} title="Opportunity Detail Page">
+        <div class="slds-var-p-around_small">
+            <c-asset-details assert-detail-id={parentRecordId} if:true={stage1}></c-asset-details>
+            <c-income-details income-detail-id={parentRecordId} if:true={stage2}></c-income-details>
+            <c-loan-application-details loan-detail-id={parentRecordId} if:true={stage3}></c-loan-application-details>
+            <c-final-terms final-term-id={parentRecordId} if:true={stage4}></c-final-terms>
+        </div>
+    </lightning-card>
+</template>
